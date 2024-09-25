@@ -1,0 +1,18 @@
+@import "../../../../assets/styles/auth-form";
+
+.signup{
+  .container{
+    display: flex;
+
+    .page-image{
+      margin-top: 131px;
+      margin-left: 185px;
+    }
+
+    .input-validation-text{
+      font-family: Montserrat, sans-serif;
+      padding-top: 4px;
+      margin-bottom: 6px;
+    }
+  }
+}

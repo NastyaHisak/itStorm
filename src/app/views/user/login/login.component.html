@@ -1,0 +1,44 @@
+<section class="login" [formGroup]="loginForm">
+  <div class="container">
+    <div class="auth-form">
+      <div class="auth-title">Войти в личный кабинет</div>
+      <div class="auth-inputs">
+        <div class="auth-input">
+          <input type="text" class="input"
+                 [ngStyle]="{'border-color': email?.invalid &&
+                 (email?.dirty || email?.touched) ? 'red' : ''}"
+                 placeholder="Электронная почта" formControlName="email">
+          <div class="input-validation-text" *ngIf="email?.invalid && (email?.dirty || email?.touched)">
+            <div class="text-danger invalid-feedback" *ngIf="email?.errors?.['required']">Пожалуйста, заполните поле email.</div>
+            <div class="text-danger invalid-feedback" *ngIf="email?.errors?.['email']">Данные поля email некорректны.</div>
+          </div>
+        </div>
+        <div class="auth-input">
+          <input type="password" class="input"
+                 [ngStyle]="{'border-color': password?.invalid &&
+                 (password?.dirty || password?.touched) ? 'red' : ''}"
+                 placeholder="Пароль" formControlName="password">
+          <div class="input-validation-text" *ngIf="password?.invalid && (password?.dirty || password?.touched)">
+            <div class="text-danger invalid-feedback" *ngIf="password?.errors?.['required']">Пожалуйста, заполните поле пароль.</div>
+          </div>
+        </div>
+        <div class="auth-checkbox">
+          <input type="checkbox" id="remember" formControlName="rememberMe">
+          <label for="remember">Запомнить меня</label>
+        </div>
+      </div>
+
+      <div class="auth-button">
+        <button class="button" [disabled]="loginForm.invalid" (click)="login()">Войти</button>
+      </div>
+
+      <div class="auth-link">
+        Нет аккаунта?<a routerLink="/signup">Пройдите регистрацию</a>
+      </div>
+    </div>
+
+    <div class="page-image">
+      <img src="/assets/images/page/login.png" alt="">
+    </div>
+  </div>
+</section>

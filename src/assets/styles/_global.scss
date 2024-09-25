@@ -1,0 +1,73 @@
+@import "variables";
+@import "mixins";
+
+
+html, body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: $dark-blue-text-color;
+  font-weight: 400;
+}
+.container{
+  max-width: $container-width;
+  margin: 0 auto;
+}
+a{
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.input{
+  padding: 17px 20px;
+  border: 2px solid $light-blue-text-color;
+  border-radius: 3px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: $dark-blue-text-color;
+  outline: none;
+
+  &::placeholder{
+    color: #A8ABA7;
+  }
+}
+
+.button {
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  background: #709FDC;
+  cursor: pointer;
+  border: 0;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+
+  &:disabled{
+    background: grey;
+    cursor: not-allowed;
+  }
+}
+
+.carusel-item-title span{
+  color: $light-blue-text-color;
+}
+
+.owl-theme .owl-nav.disabled+.owl-dots {
+  margin-top: -30px;
+  position: absolute;
+  right: calc(50% - 35px);
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  border: 1px solid #FFFFFF;
+  background-color: transparent;
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: #FFFFFF;
+}
+
+

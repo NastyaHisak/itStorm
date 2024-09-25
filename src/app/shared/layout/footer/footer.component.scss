@@ -1,0 +1,132 @@
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/mixins";
+
+
+footer.footer{
+  padding: 40px 0 54px 0;
+  background: #B9D5FD;
+
+  .container{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+
+    .footer-top{
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+
+      .logo{
+        margin-right: 40px;
+      }
+
+      nav ul{
+        display: flex;
+
+        li{
+          margin-right: 30px;
+          list-style: none;
+
+          &:last-child{
+            margin-right: 0;
+          }
+
+          &.active{
+            color: $light-blue-text-color;
+          }
+
+          a{
+            font-size: 16px;
+            color: $dark-blue-text-color;
+          }
+        }
+      }
+    }
+
+    .footer-bottom{
+      display: flex;
+      align-items: baseline;
+      margin-bottom: 6px;
+
+      .footer-bottom-group{
+        margin-right: 60px;
+        max-width: 253px;
+
+        .footer-bottom-group-title{
+          color: $light-blue-text-color;
+          font-weight: 500;
+          margin-bottom: 10px;
+        }
+
+        .footer-bottom-group-content{
+          a{
+            color: $dark-blue-text-color;
+          }
+        }
+
+        .footer-bottom-group-button{
+          margin-top: 10px;
+          width: 153px;
+          height: 36px;
+          font-weight: 500;
+        }
+
+        .footer-bottom-group-actions{
+          display: flex;
+          align-items: center;
+
+          svg{
+            margin-right: 12px;
+          }
+        }
+
+      }
+    }
+
+    .footer-rights{
+      color: $light-blue-text-color;
+    }
+  }
+}
+
+.footer-popup{
+  padding: 95px 160px;
+  background-color: #fff;
+
+  .footer-popup-close{
+    position: absolute;
+    cursor: pointer;
+    top: 30px;
+    right: 30px;
+  }
+
+  .footer-popup-title{
+    @include head-lora;
+    line-height: 130%;
+    font-size: 36px;
+    max-width: 422px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .auth-input input{
+    box-sizing: border-box;
+    width: 422px;
+    margin-bottom: 5px;
+  }
+  .input-validation-text{
+    font-family: Montserrat, sans-serif;
+    max-width: 422px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+  .auth-button button{
+    box-sizing: border-box;
+    width: 422px;
+    height: 51px;
+    margin-top: 15px;
+    font-size: 16px;
+  }
+}

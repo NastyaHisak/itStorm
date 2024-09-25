@@ -1,0 +1,57 @@
+@import "../../../../assets/styles/variables";
+header.header{
+  padding: 40px 0;
+
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+
+
+    nav ul{
+      margin: 0 127px 0 0;
+      display: flex;
+
+      li{
+        margin-right: 30px;
+        list-style: none;
+        border-bottom: 1px solid transparent;
+
+        &:last-child{
+          margin-right: 0;
+        }
+
+        &.active{
+          color: $light-blue-text-color;
+          border-bottom-color: $light-blue-text-color;
+
+        }
+
+        a{
+          font-size: 16px;
+          color: $dark-blue-text-color;
+        }
+      }
+    }
+
+    .header-phone{
+      color: $light-blue-text-color;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      margin-right: 41px;
+    }
+
+    .header-action a{
+      display: flex;
+      align-items: center;
+      color: $dark-blue-text-color;
+      svg{
+        margin-right: 7px;
+      }
+    }
+  }
+}
